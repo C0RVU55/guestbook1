@@ -25,5 +25,13 @@ SELECT  no,
         name,
         password,
         content,
-        reg_date
+        to_char(sysdate, 'YYYY-MM-DD HH24:MI:SS') reg_date
 FROM guestbook;
+
+--입력(날짜는 컬럼명이 아니라 sysdate만 넣음. select는 어떻게 보여줄지를 나타내는 거) 
+insert into guestbook
+VALUES(seq_no.nextval, '이다현', '1234', '안녕하세요', sysdate);
+
+--삭제
+delete from guestbook
+where no=1;
