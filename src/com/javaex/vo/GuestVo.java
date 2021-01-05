@@ -12,7 +12,20 @@ public class GuestVo {
 	// 생성자
 	public GuestVo() {
 	}
-
+	
+	public GuestVo(String name, String password, String content) {
+		this.name = name;
+		this.password = password;
+		this.content = content;
+	}
+	
+	public GuestVo(int no, String name, String password, String content) {
+		this.no = no;
+		this.name = name;
+		this.password = password;
+		this.content = content;
+	}
+	
 	public GuestVo(int no, String name, String password, String content, String regDate) {
 		this.no = no;
 		this.name = name;

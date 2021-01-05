@@ -19,3 +19,11 @@ create table guestbook(
 create SEQUENCE seq_no
   INCREMENT BY 1
   start with 1;
+  
+--출력
+SELECT  no,
+        name,
+        password,
+        content,
+        reg_date
+FROM guestbook;
