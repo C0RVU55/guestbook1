@@ -114,7 +114,7 @@ public class GuestDao2 {
 			// SQL문 준비 / 바인딩 / 실행
 			String query = "";
 			query += " delete from guestbook ";
-			query += " where no = ? and password = ? ";
+			query += " where no = ? and password = ? "; // 쿼리문에 조건 추가해서 한번에 처리함.
 
 			pstmt = conn.prepareStatement(query);
 
