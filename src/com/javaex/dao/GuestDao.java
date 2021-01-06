@@ -70,13 +70,15 @@ public class GuestDao {
 		getConnection();
 
 		try {
-			// SQL문 준비 / 바인딩 / 실행
+			// SQL문 준비 / 바인딩 / 실행 
+			// --> reg_date 말고 sysdate 넣었는데 reg_date는 그냥 자료형이 date인 거고 날짜 넣는 건 insert에서 sysdate가 하는 거.
+			// 여기에 sysdate 넣으면 등록할 때마다 전체 글 등록시간이 갱신됨.   
 			String query = "";
 			query += " SELECT  no, ";
 			query += "         name, ";
 			query += "         password, ";
 			query += "         content, ";
-			query += "         to_char(sysdate, 'YYYY-MM-DD HH24:MI:SS') reg_date ";
+			query += "         to_char(reg_date, 'YYYY-MM-DD HH24:MI:SS') reg_date ";
 			query += " FROM guestbook ";
 
 			pstmt = conn.prepareStatement(query);
@@ -173,7 +175,7 @@ public class GuestDao {
 			query += "         name, ";
 			query += "         password, ";
 			query += "         content, ";
-			query += "         to_char(sysdate, 'YYYY-MM-DD HH24:MI:SS') reg_date ";
+			query += "         to_char(reg_date, 'YYYY-MM-DD HH24:MI:SS') reg_date ";
 			query += " FROM guestbook ";
 			query += " where no = ? ";
 
