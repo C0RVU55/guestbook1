@@ -9,7 +9,7 @@
 <%--오류 : 방명록을 등록할 때마다 모든 방명록의 출력시간이 갱신됨 
 	이거 해결했는데 갑자기 등록할 때 한글이 깨짐--%>
 
-<% request.setCharacterEncoding("UTF-8"); %> <%--post방식에서 한글 깨질 때 넣는 코드 --%>
+<% request.setCharacterEncoding("UTF-8"); %> <%--post방식에서 한글 깨질 때 넣는 코드. input하는 파일과 파라미터 받는 파일에 다 넣어줌.--%>
 
 <%
 	GuestDao gDao = new GuestDao();
