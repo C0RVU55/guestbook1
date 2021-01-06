@@ -5,6 +5,8 @@
 
 <%--내용 삭제 폼 --%>
 
+<% request.setCharacterEncoding("UTF-8"); %>
+
 <%
 	int no = Integer.parseInt(request.getParameter("no"));
 	

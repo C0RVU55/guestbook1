@@ -6,6 +6,8 @@
     
 <%--내용 추가 --%>
 
+<% request.setCharacterEncoding("UTF-8"); %>
+
 <%--받은 값(request) 꺼내오기 --%>
 <%	
 	String name = request.getParameter("name");
