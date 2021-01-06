@@ -25,7 +25,7 @@
 	<form action="./delete.jsp" method="post">
 		비밀번호 <input type="text" name="password"> 
 		<button type="submit">확인</button>
-		<!--코드 no--> <input type="hidden" name="no" value="<%=gVo.getNo() %>">
+		<!--코드 no--> <input type="hidden" name="no" value="<%=gVo.getNo()%>">
 	<!-- 숨긴 no 없으면 delete.jsp에서 java.lang.NumberFormatException 오류 남.
 		delete.jsp에서 파라미터를 no, password 받게 돼 있는데 addList에서 받은 no값이 계속 유지되는 게 아니라서
 		비번 입력하고 확인 눌러서 delete.jsp로 넘어갈 때 비번값만 가게 됨. 
