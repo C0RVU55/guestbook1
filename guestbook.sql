@@ -25,7 +25,7 @@ SELECT  no,
         name,
         password,
         content,
-        to_char(sysdate, 'YYYY-MM-DD HH24:MI:SS') reg_date
+        to_char(reg_date, 'YYYY-MM-DD HH24:MI:SS') reg_date
 FROM guestbook;
 
 --입력(날짜는 컬럼명이 아니라 sysdate만 넣음. select는 어떻게 보여줄지를 나타내는 거) 
